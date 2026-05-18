@@ -1,0 +1,335 @@
+/* Estilo geral*/
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+header {
+  background-color: #e50914;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  padding: 15px;
+  text-align: center;
+  background-color: #000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #e50914;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+  color: #666;
+}
+
+/* Buscador */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('/img/sala_cine.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  margin: 0 0 20px 0;
+  font-size: 2.5rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-box button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.search-box button:hover {
+  background-color: #b80710;
+}
+
+/* Tarjetas peliculas*/
+.movies {
+  padding: 40px 20px;
+}
+
+#movies-section, 
+.movies-grid {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.movie-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  padding-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  margin: 15px;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  line-height: 1.2;
+}
+
+/* Botones*/
+.contenedor-botones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.btn-ver,
+.btn-desc,
+.btn-borrar {
+  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  flex: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s, transform 0.1s;
+  font-family: inherit;
+}
+
+.btn-ver {
+  background-color: #e50914;
+}
+
+.btn-desc {
+  background-color: #444;
+}
+
+.btn-borrar {
+  background-color: #e50914;
+  width: 80%; /* Ajuste para cuando está solo en la vista de favoritos */
+  margin: 0 auto;
+}
+
+.btn-ver:hover, .btn-desc:hover, .btn-borrar:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn-fav-selec {
+  background-color: #0056b3 !important; /* Azul para películas guardadas */
+}
+
+/* Paginación y navegación*/
+.section-paginacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 3rem 0 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-paginacion button {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.section-paginacion button:hover:not(.nav-pag-ant) {
+  transform: scale(1.1);
+  color: #e50914;
+}
+
+.nav-pag-ant {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.section-volver {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+}
+
+.section-volver:hover {
+  color: #e50914;
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   6. VISTA DETALLE / DESCRIPCIÓN DE PELÍCULA
+   ========================================================================== */
+.description__wrapper {
+  display: flex;
+  gap: 32px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  color: #f2f2f2;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+.description__img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.description__info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.description__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.description__rating {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5c518; /* Color dorado clásico de IMDb */
+  margin: 0;
+}
+
+.description__meta {
+  font-size: 1rem;
+  color: #c9c9c9;
+  margin: 0;
+}
+
+.description__meta strong {
+  color: #fff;
+}
+
+.description__desc-box {
+  margin-top: 8px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+.description__desc {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.description__link {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #e50914;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.description__link:hover {
+  background-color: #b80710;
+  transform: translateY(-2px);
+}
+
+/*Resposive móviles*/
+
+@media (max-width: 768px) {
+  .description__wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .description__img {
+    width: 220px;
+  }
+
+  .description__link {
+    align-self: center;
+  }
+
+  #search-input {
+    width: 200px;
+  }
+  
+  .section-paginacion {
+    padding: 2rem 1rem 0 1rem;
+  }
+}

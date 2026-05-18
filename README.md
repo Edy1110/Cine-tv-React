@@ -70,7 +70,6 @@ El desarrollo del prototipo se ha planteado siguiendo los siguientes requerimien
 
 ## Árbol de archivos
 ```text
-```text
 cine-tv/
 ├── node_modules/             # Dependencias del proyecto instaladas por npm
 ├── public/                   # Archivos estáticos globales (iconos, etc.)

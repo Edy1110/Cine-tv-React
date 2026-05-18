@@ -50,7 +50,8 @@ graph TD
 </center>
 
 ## Tecnologías utilizadas
-
+![ReactCompiler]
+![Packege.json]
 ![HTML](https://img.shields.io/badge/HTML5-%23E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-%23663399?style=flat&logo=css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7E018?style=flat&logo=javascript&logoColor=white)
@@ -69,25 +70,25 @@ El desarrollo del prototipo se ha planteado siguiendo los siguientes requerimien
 
 ## Árbol de archivos
 ```text
-.
-├── css/                          # Hojas de estilo CSS
-│   ├── descripcion.css
-│   └── style.css
-├── js/                           # Lógica en JavaScript
-│   ├── api.js
-│   ├── descripcion.js
-│   ├── DOM.js
-│   ├── error.js
-│   ├── favorito.js
-│   ├── index.js
-│   └── samples.js
-├── img/                          # Imágenes
-│   └── sala cine.jpg
-├── .gitignore                    # Archivo .gitignore
-├── descripcion.html              # Página de descripción
-├── favorito.html                 # Paágina de listado de favoritos
-├── index.html                    # Página principal
-└── README.md                     # Documentación del proyecto
+```text
+cine-tv/
+├── node_modules/             # Dependencias del proyecto instaladas por npm
+├── public/                   # Archivos estáticos globales (iconos, etc.)
+├── src/                      # Código fuente de la aplicación React
+│   ├── assets/               # Recursos estáticos locales (imágenes, logos)
+│   ├── components/           # Componentes de UI reutilizables (Header, Navbar, MovieCard, Footer)
+│   ├── pages/                # Vistas principales de la app (Inicio, Favoritos, Descripcion)
+│   ├── services/             # Lógica de conexiones externas (Llamadas a la API de OMDb)
+│   ├── App.jsx               # Componente raíz con el enrutador y layout principal
+│   ├── index.css             # Estilos CSS unificados de toda la aplicación
+│   └── main.jsx              # Punto de entrada de React (conecta con el HTML)
+├── .gitignore                # Archivos y carpetas excluidos en Git (como node_modules)
+├── eslint.config.js          # Configuración del linter para la calidad del código
+├── index.html                # Archivo HTML base donde se monta la app de React
+├── package-lock.json         # Historial exacto de las versiones instaladas
+├── package.json              # Configuración del proyecto y scripts de npm (dev, build, lint)
+├── README.md                 # Documentación del proyecto
+└── vite.config.js            # Configuración del empaquetador Vite
 ```
 
 ## Hecho con React ----  Autores
